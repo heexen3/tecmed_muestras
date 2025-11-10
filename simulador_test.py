@@ -1,12 +1,10 @@
 import oracledb
 import os
 import sys
-from dotenv import load_dotenv # <--- IMPORTANTE: Importar la librería
+from dotenv import load_dotenv 
 
 load_dotenv() # Carga las variables del archivo .env
 
-# --- 2. LEER VARIABLES (Modo Seguro) ---
-# Lee las credenciales desde el entorno (nunca escritas en el código)
 try:
     USER = os.environ.get("DB_USER")
     PASSWORD = os.environ.get("DB_PASS")
@@ -23,8 +21,6 @@ except KeyError:
     print("❌ ERROR: Variables de entorno no configuradas.")
     sys.exit(1)
 
-
-# --- 3. LÓGICA DE NEGOCIO (Sin cambios, ahora es segura) ---
 try:
     print("--- INICIANDO SIMULADOR DE MÁQUINA (Modo Seguro) ---")
     

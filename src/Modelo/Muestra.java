@@ -18,11 +18,10 @@ public class Muestra {
     public Muestra() {
     }
 
-    public Muestra(Integer mu_id, String mu_tipo, String mu_estado, Paciente paciente) {
-        setMu_id(mu_id);
+    public Muestra(String mu_tipo, Paciente paciente) {
         setMu_tipo(mu_tipo);
-        setMu_estado(mu_estado);
         setPaciente(paciente);
+        this.mu_estado = "Recibida";
     }
 
     public Integer getMu_id() {

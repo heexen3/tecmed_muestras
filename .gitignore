@@ -1,0 +1,15 @@
+# Secretos
+.env
+Wallet_BDTecMed/
+
+# Entorno virtual de Python
+venv_simulador/
+
+# Archivos de Java (del Sprint 1)
+*.jar
+*.class
+
+# NetBeans
+/nbproject/private/
+/build/
+/dist/

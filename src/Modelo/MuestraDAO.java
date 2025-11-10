@@ -30,12 +30,13 @@ public class MuestraDAO {
     public void guardarMuestra(Muestra muestra) throws SQLException {
         
     String sql = "INSERT INTO MUESTRA (mu_id, mu_tipo, mu_estado, PACIENTE_pa_rut) "
-                + "VALUES (muestra_id_seq.NEXTVAL, ?, 'Recibida', ?)";
+                + "VALUES (muestra_id_seq.NEXTVAL, ?, ?, ?)";
     try (Connection con = conexionBD.conectar();
         PreparedStatement pstmt = con.prepareStatement(sql)) {
         
-        pstmt.setString(1, muestra.getMu_tipo()); 
-        pstmt.setString(2, muestra.getPaciente().getPa_rut()); 
+        pstmt.setString(1, muestra.getMu_tipo());
+        pstmt.setString(2, muestra.getMu_estado());
+        pstmt.setString(3, muestra.getPaciente().getPa_rut()); 
         
         pstmt.executeUpdate(); 
 

@@ -83,12 +83,8 @@ public class ControladorApp implements ActionListener {
                 pacienteDAO.guardarPaciente(paciente);
             }
             
-            int idMuestra = Integer.parseInt(vista.getTxtIdMuestra().getText());
-            
             nuevaMuestra = new Muestra(
-                    idMuestra,
-                    vista.getTxtTipo().getText(),
-                    "Recibida", // Estado inicial por defecto
+                    (String) vista.getCmbTipo().getSelectedItem(),
                     paciente // Inyección del objeto Paciente
             );
              
@@ -96,7 +92,7 @@ public class ControladorApp implements ActionListener {
             
             // Feedback
             JOptionPane.showMessageDialog(vista,
-                    "Paciente y Muestra ID " + idMuestra + " guardados con éxito.",
+                    "Muestra guardada con éxito.",
                     "Exito", JOptionPane.INFORMATION_MESSAGE);
 
             cargarTablaMuestras();

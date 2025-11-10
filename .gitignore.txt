@@ -1,0 +1,9 @@
+# NetBeans auto-generated files
+/nbproject/private/
+/build/
+/dist/
+/nbbuild/
+/nbdist/
+
+# Archivos de caché
+/var/

@@ -30,6 +30,7 @@ def analizar_resultados():
             password=PASSWORD,
             dsn=DSN,
             config_dir=WALLET_PATH,
+            wallet_location=WALLET_PATH,
             wallet_password=WALLET_PASSWORD
         ) as connection:
             
